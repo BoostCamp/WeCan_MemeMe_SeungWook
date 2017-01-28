@@ -23,7 +23,7 @@ class TableViewCell: UITableViewCell {
     override func layoutSubviews() {
         self.imageView?.frame = CGRect(x: 5, y: 5, width: 200, height: 200)
         self.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        self.textLabel?.frame = CGRect(x: 230, y: 100, width: 1000, height: 10)
+        self.textLabel?.frame = CGRect(x: 230, y: 100, width: 1000, height: 20)
         self.textLabel?.textAlignment = NSTextAlignment.natural
     }
 
