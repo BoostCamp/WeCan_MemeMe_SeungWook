@@ -64,6 +64,13 @@ class CollectionViewController: UICollectionViewController {
         let detailController = storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         detailController.memedImage = appDelegate.memes[indexPath.row]
         navigationController?.pushViewController(detailController, animated: true)
+        
+        appDelegate.topText = appDelegate.memes[indexPath.row].topText
+        
+        appDelegate.bottomText = appDelegate.memes[indexPath.row].bottomText
+        
+        appDelegate.image = appDelegate.memes[indexPath.row].originalImage
+
     }
 
    

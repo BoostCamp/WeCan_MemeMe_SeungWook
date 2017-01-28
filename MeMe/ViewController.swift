@@ -48,6 +48,32 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         bottomTextField.textAlignment = .center
         
         shareButton.isEnabled = false
+        
+        let ad = UIApplication.shared.delegate as? AppDelegate
+        
+        if let topText = ad?.topText {
+            topTextField.text = topText
+            ad?.topText = nil
+        }
+        else {
+            topTextField.text = "TOP"
+        }
+        
+        if let bottomText = ad?.bottomText {
+            bottomTextField.text = bottomText
+            ad?.bottomText = nil
+        }
+        else {
+            bottomTextField.text = "BOTTOM"
+        }
+        
+        if let image = ad?.image {
+            pickerImageView.image = image
+            ad?.image = nil
+        }
+        else {
+            pickerImageView.image = nil
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +81,8 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         //카메라 사용 가능한지
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         self.subscribeToKeyboardNotifications()
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

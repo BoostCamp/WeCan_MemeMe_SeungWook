@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MeMe/ViewController.swift"
-            timestampString = "507037216.259147"
+            timestampString = "507307974.124087"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "keyboardWillShow(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MeMe/MemeDetailViewController.swift"
-            timestampString = "507282047.997857"
+            timestampString = "507307745.256609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "MemeDetailViewController"
             landmarkType = "3">
             <Locations>
@@ -93,6 +93,54 @@
                   startingLineNumber = "26"
                   endingLineNumber = "26"
                   offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeMe/ViewController.swift"
+            timestampString = "507307974.124087"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeMe.ViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "MeMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seungwoo/Documents/WeCan_MemeMe_SeungWook/MeMe/ViewController.swift"
+                  timestampString = "507307919.743775"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "3016">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeMe.ViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "MeMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seungwoo/Documents/WeCan_MemeMe_SeungWook/MeMe/ViewController.swift"
+                  timestampString = "507307919.746499"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "3321">
                </Location>
             </Locations>
          </BreakpointContent>

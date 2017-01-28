@@ -19,10 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let memedImage : UIImage
     }
 
+    var window: UIWindow?
+    
     // data list for table view, collection view
     var memes = [Meme]()
     
-    var window: UIWindow?
+    var topText:String?
+    var bottomText:String?
+    var image:UIImage?
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
