@@ -19,8 +19,6 @@ let memeTextAttributes = [
 class MemeDetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var detailedImageView: UIImageView!
     
-    
-    
     var editButtonFlag = false
     var memedImage : AppDelegate.Meme?
     
@@ -36,11 +34,10 @@ class MemeDetailViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    
     //when touch edit Button
     @IBAction func editMemedImage(_ sender: Any) {
         tabBarController?.tabBar.isHidden = false
         self.dismiss(animated: true, completion: nil)
         
-    }}
+    }
+}
