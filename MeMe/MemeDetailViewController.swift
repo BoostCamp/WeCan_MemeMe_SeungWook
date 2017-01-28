@@ -94,6 +94,7 @@ class MemeDetailViewController: UIViewController, UITextFieldDelegate {
         return keyboardSize.cgRectValue.height
     }
     
+    // subscribe observer for keyboard
     func subscribeToKeyboardNotifications() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_ :)), name: .UIKeyboardWillShow, object: nil)
@@ -101,18 +102,22 @@ class MemeDetailViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_ :)), name: .UIKeyboardWillHide, object: nil)
     }
     
+    // unsubscribe observer for keyboard
     func unsubscribeFromKeyboardNotifications() {
         
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardDidHide, object: nil)
     }
     
+    // hide toolbar, naviBar
     func hiddenUI(hidden: Bool){
         self.detailedViewToolBar.isHidden = hidden
         self.navigationController?.navigationBar.isHidden = hidden
     }
     
+    // when share alert handler event
     func completionHandler(activityType: UIActivityType?, shared: Bool, items: [Any]?, error: Error?) {
+        // success to share image
         if (shared) {
             let object = UIApplication.shared.delegate
             let appDelegate = object as! AppDelegate
@@ -125,11 +130,13 @@ class MemeDetailViewController: UIViewController, UITextFieldDelegate {
             isEnabledElement(false)
             tabBarController?.tabBar.isHidden = false
         }
+            // click cancel button
         else {
             print("Cancel to share")
         }
     }
     
+    // generate image
     func generateMemedImage() -> UIImage {
         //hidden navigation Bar, Toolbar
         hiddenUI(hidden: true)
@@ -144,12 +151,15 @@ class MemeDetailViewController: UIViewController, UITextFieldDelegate {
         return memedImage
     }
     
+    // save memed image
     func save() {
         meme = AppDelegate.Meme(topText: detailedTopTextField.text!, bottomText: detailedBottomTextField.text!, originalImage: detailedImageView.image!, memedImage: generateMemedImage())
     }
 
     
+    //when touch edit Button
     @IBAction func editMemedImage(_ sender: Any) {
+        // when saved
         if editButtonFlag == true {
             save()
             let memedImage : Any = meme?.memedImage as Any
@@ -160,7 +170,7 @@ class MemeDetailViewController: UIViewController, UITextFieldDelegate {
             
             activityViewController.completionWithItemsHandler = completionHandler
 
-            
+            //when edited
         } else {
             editButtonFlag = true
             editButton.title = "Save"
@@ -170,7 +180,7 @@ class MemeDetailViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    //when touch cancel button
     @IBAction func cancelButton(_ sender: Any) {
         isEnabledElement(false)
         editButton.title = "Edit"

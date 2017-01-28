@@ -12,15 +12,14 @@ class TableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
     
+    // Initialize layout view of cell
     override func layoutSubviews() {
         self.imageView?.frame = CGRect(x: 5, y: 5, width: 200, height: 200)
         self.imageView?.contentMode = UIViewContentMode.scaleAspectFit

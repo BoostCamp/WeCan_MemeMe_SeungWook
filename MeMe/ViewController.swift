@@ -109,6 +109,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         return keyboardSize.cgRectValue.height
     }
     
+    // subscribe observer for keyboard
     func subscribeToKeyboardNotifications() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_ :)), name: .UIKeyboardWillShow, object: nil)
@@ -116,16 +117,19 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_ :)), name: .UIKeyboardWillHide, object: nil)
     }
     
+    // unsubscribe observer for keyboard
     func unsubscribeFromKeyboardNotifications() {
         
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardDidHide, object: nil)
     }
     
+    // when event to touch anywhere
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+    // generate image
     func generateMemedImage() -> UIImage {
         //hidden navigation Bar, Toolbar
         hiddenUI(hidden: true)
@@ -140,16 +144,18 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         return memedImage
     }
     
+    // save memed image
     func save() {
         meme = AppDelegate.Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: pickerImageView.image!, memedImage: generateMemedImage())
     }
     
+    // hide toolbar, naviBar
     func hiddenUI(hidden: Bool){
         self.toolbar.isHidden = hidden
         self.navigationBar.isHidden = hidden
     }
     
-    
+    // when touch album button
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -157,6 +163,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         self.present(imagePicker, animated: true)
     }
     
+    // when touch camera button
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -164,6 +171,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         present(imagePicker, animated: true, completion: nil)
     }
 
+    // share to memed image
     @IBAction func shardMemedImage(_ sender: Any) {
         save()
         let memedImage : Any = meme?.memedImage as Any
@@ -175,6 +183,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         activityViewController.completionWithItemsHandler = completionHandler
     }
     
+    // when share alert handler event
     func completionHandler(activityType: UIActivityType?, shared: Bool, items: [Any]?, error: Error?) {
         if (shared) {
             let object = UIApplication.shared.delegate
@@ -186,6 +195,8 @@ UINavigationControllerDelegate, UITextFieldDelegate {
             print("Cancel to share")
         }
     }
+    
+    // touch cancel button
     @IBAction func touchCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

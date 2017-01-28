@@ -27,18 +27,13 @@ class TableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    /*
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // memes Array Count
-        return 1
-    }
-    */
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // memes Array Count
         return appDelegate.memes.count
     }
  
-    
+    // load data to tableview
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewIdentifier, for: indexPath)
         let memeItem = appDelegate.memes[indexPath.row]
@@ -47,6 +42,7 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    // event to selected cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailController = storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         detailController.memedImage = appDelegate.memes[indexPath.row]

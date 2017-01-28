@@ -11,6 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // sturct of Meme
     struct Meme {
         let topText : String
         let bottomText : String
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let memedImage : UIImage
     }
 
+    // data list for table view, collection view
     var memes = [Meme]()
     
     var window: UIWindow?
