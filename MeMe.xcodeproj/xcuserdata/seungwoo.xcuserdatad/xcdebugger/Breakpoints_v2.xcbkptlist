@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeMe/ViewController.swift"
+            timestampString = "507037216.259147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "keyboardWillShow(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeMe/MemeDetailViewController.swift"
+            timestampString = "507282047.997857"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "MemeDetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeMe.MemeDetailViewController.editButtonFlag.getter : Swift.Bool"
+                  moduleName = "MeMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seungwoo/Documents/MeMe/MeMe/MemeDetailViewController.swift"
+                  timestampString = "507282048.746714"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeMe.MemeDetailViewController.editButtonFlag.setter : Swift.Bool"
+                  moduleName = "MeMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seungwoo/Documents/MeMe/MeMe/MemeDetailViewController.swift"
+                  timestampString = "507282048.750399"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeMe.MemeDetailViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MeMe.MemeDetailViewController"
+                  moduleName = "MeMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seungwoo/Documents/MeMe/MeMe/MemeDetailViewController.swift"
+                  timestampString = "507282048.752108"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "343">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeMe.MemeDetailViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MeMe.MemeDetailViewController&gt;"
+                  moduleName = "MeMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seungwoo/Documents/MeMe/MeMe/MemeDetailViewController.swift"
+                  timestampString = "507282048.753553"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
