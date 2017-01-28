@@ -123,6 +123,7 @@ class MemeDetailViewController: UIViewController, UITextFieldDelegate {
             editButtonFlag = false
             editButton.title = "Edit"
             isEnabledElement(false)
+            tabBarController?.tabBar.isHidden = false
         }
         else {
             print("Cancel to share")
