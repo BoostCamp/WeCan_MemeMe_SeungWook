@@ -69,6 +69,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         
         if let image = ad?.image {
             pickerImageView.image = image
+            shareButton.isEnabled = true
             ad?.image = nil
         }
         else {
